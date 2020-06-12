@@ -27,7 +27,7 @@ namespace Denisov.TobaccoStore
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
             x => x.MigrationsAssembly("Denisov.DAL")));
 
-            services.AddScoped(typeof(IRepository<>), typeof(RepositoryManager<>));
+            //services.AddScoped(typeof(IRepository<>), typeof(RepositoryManager<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
