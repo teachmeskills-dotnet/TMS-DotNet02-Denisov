@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Persistence\" />
+    <Compile Remove="Persistence\Migrations\20200612135448_Init.cs" />
+    <Compile Remove="Persistence\Migrations\20200612135448_Init.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +25,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Denisov.Common\Denisov.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Persistence\Migrations\" />
   </ItemGroup>
 
 </Project>
