@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Denisov.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Denisov.BLL.Services;
+using Denisov.Common.Interfaces;
 
 namespace Denisov.TobaccoStore
 {
@@ -29,6 +26,8 @@ namespace Denisov.TobaccoStore
             services.AddDbContext<DenisovDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
             x => x.MigrationsAssembly("Denisov.DAL")));
+
+            services.AddScoped(typeof(IRepository<>), typeof(RepositoryManager<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
