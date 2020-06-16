@@ -1,3 +1,4 @@
+![.NET Core](https://github.com/teachmeskills-dotnet/TMS-DotNet02-Denisov/workflows/CI/badge.svg)
 # Tobacco store
 The main idea of the application is to develop web-application which will generate different tobaccos and mixes for hookah. Then user can manage them as he prefers on his personal page. Furthermore user needs to be signed up to do any possible action.
 ## Getting Started
