@@ -4,9 +4,9 @@ The main idea of the application is to develop web-application which will genera
 ## Getting Started
 The application is free-to-use, so you just need to login to start and open a enormous world of hookah tobaccos.
 ## Built with
-[ASP.NET Core 3.1](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
-[Docker](https://www.docker.com)
-[Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
+- [ASP.NET Core 3.1](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
+- [Docker](https://www.docker.com)
+- [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 ## Author
 [Viktor D.](https://admiring-northcutt-353fff.netlify.app) - Junior Developer.
 ## License
