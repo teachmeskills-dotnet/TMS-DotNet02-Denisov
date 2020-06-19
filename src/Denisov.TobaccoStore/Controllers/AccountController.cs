@@ -1,7 +1,10 @@
-﻿using Denisov.DAL.Identity;
+﻿using Denisov.DAL;
+using Denisov.DAL.Entities;
+using Denisov.DAL.Identity;
 using Denisov.TobaccoStore.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 
 namespace Denisov.TobaccoStore.Controllers
@@ -10,11 +13,13 @@ namespace Denisov.TobaccoStore.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly DenisovDbContext _appContext;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, DenisovDbContext appContext)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
+            _userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+            _signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
+            _appContext = appContext ?? throw new ArgumentNullException(nameof(appContext));
         }
         [HttpGet]
         public IActionResult Register()
@@ -31,6 +36,20 @@ namespace Denisov.TobaccoStore.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var profile = new Profile()
+                    {
+                        FirstName = model.FirstName,
+                        SecondName = model.SecondName,
+                        MiddleName = model.MiddleName,
+                        BirthDate = model.BirthDate,
+                        IsDeleted = false,
+                        IsBlocked = false,
+                        UserId = user.Id,
+                    };
+
+                    await _appContext.Profiles.AddAsync(profile);
+                    await _appContext.SaveChangesAsync();
+
 
                     await _signInManager.SignInAsync(user, false);
                     return RedirectToAction("Index", "Home");
