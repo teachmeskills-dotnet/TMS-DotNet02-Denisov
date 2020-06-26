@@ -18,7 +18,6 @@
                         <a class="nav__link">Генератор</a>
                         <a class="nav__link">Места</a>
                         <a class="nav__link">О нас</a>
-                        <a class="nav__link" asp-area="" asp-controller="Account" asp-action="Register">Регистрация</a>
                         @if (User.Identity.IsAuthenticated)
                         {                       
                                 <p class="nav__link">@User.Identity.Name</p>

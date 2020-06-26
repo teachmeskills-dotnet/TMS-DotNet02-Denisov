@@ -161,11 +161,28 @@ body {
     color: antiquewhite;
 }
 
+/* Registration */
+
+.register__title {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+
+.register__model {
+    width: 450px;
+    position: absolute;
+    margin-left: 750px;
+    height: 600px;
+}
+
+.register__button{
+padding-top: 5px;
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   */
-
-
 @media (min-width: 768px) {
-  html {
+    html {
     font-size: 16px;
   }
 }
