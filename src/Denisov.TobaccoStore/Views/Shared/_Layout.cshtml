@@ -8,51 +8,44 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <!--   !!!!   -->
+    <header class="header">     
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Denisov.TobaccoStore</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
-                        </li>
+                <div class="header__inner">
+                    <div class="header__logo">Denisov Tobacco Store</div>
+                    <nav class="nav">
+                        <a class="nav__link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                        <a class="nav__link">Генератор</a>
+                        <a class="nav__link">Места</a>
+                        <a class="nav__link">О нас</a>
+                        <a class="nav__link" asp-area="" asp-controller="Account" asp-action="Register">Регистрация</a>
                         @if (User.Identity.IsAuthenticated)
-                        {
-                            <li class="nav-item">
-                                <p class="nav-link text-dark">@User.Identity.Name</p>
-                            </li>
-
-                            <li class="nav-item">
-                                <form method="post" class="nav-link text-dark" asp-controller="Account" asp-action="Logout">
-                                    <input type="submit" value="Exit" />
+                        {                       
+                                <p class="nav__link">@User.Identity.Name</p>
+                                <form method="post" class="nav__link" asp-controller="Account" asp-action="Logout">
+                                    <input type="submit" value="Выход" />
                                 </form>
-                            </li>                          
                         }
                         else
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Sign in</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Sign up</a>
-                            </li>
+                                <a class="nav__link" asp-controller="Account" asp-action="Login">Войти</a>
+                                <a class="nav__link" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>                       
                         }
-                    </ul>
+                    </nav>  
                 </div>
-            </div>
-        </nav>
+            </div>     
     </header>
+    <!--   !!!!   -->
+    <div class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class="intro__title">Текст приветствия</h1>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--   !!!!   -->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
