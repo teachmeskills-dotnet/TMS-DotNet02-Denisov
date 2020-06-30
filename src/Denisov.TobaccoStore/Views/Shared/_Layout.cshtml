@@ -4,61 +4,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Denisov.TobaccoStore</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/sign.css" />
 </head>
 <body>
-    <!--   !!!!   -->
-    <header class="header">     
+    <header class="header header-indent">     
             <div class="container">
                 <div class="header__inner">
                     <div class="header__logo">Denisov Tobacco Store</div>
-                    <nav class="nav">
-                        <a class="nav__link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-                        <a class="nav__link">Генератор</a>
-                        <a class="nav__link">Места</a>
-                        <a class="nav__link">О нас</a>
+                    <nav class="main-nav">
+                        <a class="main-nav__link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                        <a class="main-nav__link">Генератор</a>
+                        <a class="main-nav__link">Места</a>
+                        <a class="main-nav__link">О нас</a>
                         @if (User.Identity.IsAuthenticated)
                         {                       
-                                <p class="nav__link">@User.Identity.Name</p>
-                                <form method="post" class="nav__link" asp-controller="Account" asp-action="Logout">
+                                <p class="main-nav__link">@User.Identity.Name</p>
+                                <form method="post" class="main-nav__link" asp-controller="Account" asp-action="Logout">
                                     <input type="submit" value="Выход" />
                                 </form>
                         }
                         else
                         {
-                                <a class="nav__link" asp-controller="Account" asp-action="Login">Войти</a>
-                                <a class="nav__link" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>                       
+                                <a class="main-nav__link" asp-controller="Account" asp-action="Login">Войти</a>
+                                <a class="main-nav__link" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>                       
                         }
                     </nav>  
                 </div>
             </div>     
     </header>
-    <!--   !!!!   -->
-    <div class="intro">
-        <div class="container">
-            <div class="intro__inner">
-                <h1 class="intro__title">Текст приветствия</h1>
-            </div>
-        </div>
-    </div>
 
-    
-    <!--   !!!!   -->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer">
         <div class="container">
             &copy; 2020 - Denisov.TobaccoStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

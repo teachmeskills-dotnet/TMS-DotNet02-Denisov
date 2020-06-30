@@ -1,9 +1,18 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-*,
+﻿*,
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: antiquewhite;
+    background: url("~/img/Intro.jpg") center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 }
 
 h1,
@@ -15,59 +24,21 @@ h6 {
     margin: 0;
 }
 
-body {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.6;
-    color: antiquewhite;
-    background: url("../img/Intro.jpg") center no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-}
-
 /* Container */
 
 .container {
     max-width: 1920px;
     width: 100%;
-    margin: 0 auto;
 }
 
-/* Intro */
-
-.intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.intro__inner {
-    width: 100%;
-    max-width: 880px;
-    margin: 0 auto;
-}
-
-.intro__title {
-    padding-top: 200px;
-    color: antiquewhite;
-    font-size: 150px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1;
-}
 
 /* Header */
 
 .header {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.795);
 }
 
 .header__logo {
@@ -80,26 +51,31 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 40px;
+}
+
+.header-indent {
+    margin-bottom: 50px;
 }
 
 /* Navigation */
 
-.nav {
+.main-nav {
     font-size: 14px;
     text-transform: uppercase;
 }
 
-.nav__link {
+.main-nav__link {
     display: inline-block;
     vertical-align: top;
     margin: 0 15px;
     position: relative;
     color: antiquewhite;
-    text-decoration: none;
     transition: color .1s linear;
+    text-decoration: none;
 }
 
-    .nav__link:after {
+    .main-nav__link:after {
         content: "";
         display: block;
         width: 100%;
@@ -113,85 +89,21 @@ body {
         transition: opacity .1s linear;
     }
 
-    .nav__link:hover {
+    .main-nav__link:hover {
         color: brown;
+        text-decoration: none;
     }
 
-        .nav__link:hover:after {
+        .main-nav__link:hover:after {
             opacity: 1;
         }
 
-/* Main */
-
-.main {
-    padding-top: 100px;
-    position: absolute;
-    margin-left: 600px;
-    right: 0;
-}
-
-.main__conteiner {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.main__text {
-    font-size: 20px;
-    color: antiquewhite;
-}
-
-/* Additional */
-
-.additional {
-    padding-top: 100px;
-    position: absolute;
-}
-
-.additional__container {
-    display: flex;
-    justify-content: space-around;
-    max-width: 400px;
-    width: 100%;
-}
-
-.additional__text {
-    font-size: 15px;
-    color: antiquewhite;
-}
-
-/* Registration */
-
-.register__title {
-    text-transform: uppercase;
-    font-size: 20px;
-}
-
-
-.register__model {
-    width: 450px;
-    position: absolute;
-    margin-left: 750px;
-    height: 600px;
-}
-
-.register__button{
-padding-top: 5px;
-}
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   */
-@media (min-width: 768px) {
-    html {
-    font-size: 16px;
-  }
-}
-
+/* Footer */
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px; 
 }
