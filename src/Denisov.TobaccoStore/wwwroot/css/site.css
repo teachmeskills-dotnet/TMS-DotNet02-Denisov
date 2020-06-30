@@ -60,12 +60,12 @@ h6 {
 
 /* Navigation */
 
-.main-nav {
+.nav {
     font-size: 14px;
     text-transform: uppercase;
 }
 
-.main-nav__link {
+.nav__link {
     display: inline-block;
     vertical-align: top;
     margin: 0 15px;
@@ -75,7 +75,7 @@ h6 {
     text-decoration: none;
 }
 
-    .main-nav__link:after {
+    .nav__link:after {
         content: "";
         display: block;
         width: 100%;
@@ -89,12 +89,12 @@ h6 {
         transition: opacity .1s linear;
     }
 
-    .main-nav__link:hover {
+    .nav__link:hover {
         color: brown;
         text-decoration: none;
     }
 
-        .main-nav__link:hover:after {
+        .nav__link:hover:after {
             opacity: 1;
         }
 

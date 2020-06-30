@@ -14,22 +14,22 @@
             <div class="container">
                 <div class="header__inner">
                     <div class="header__logo">Denisov Tobacco Store</div>
-                    <nav class="main-nav">
-                        <a class="main-nav__link" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-                        <a class="main-nav__link">Генератор</a>
-                        <a class="main-nav__link">Места</a>
-                        <a class="main-nav__link">О нас</a>
+                    <nav class="nav">
+                        <a class="nav__link" asp-controller="Home" asp-action="Index">Главная</a>
+                        <a class="nav__link" asp-controller="Generator" asp-action="Generator">Генератор</a>
+                        <a class="nav__link" asp-controller="Places" asp-action="Places">Места</a>
+                        <a class="nav__link" asp-controller="About" asp-action="About">О нас</a>
                         @if (User.Identity.IsAuthenticated)
                         {                       
-                                <p class="main-nav__link">@User.Identity.Name</p>
+                                <p class="nav__link">@User.Identity.Name</p>
                                 <form method="post" class="main-nav__link" asp-controller="Account" asp-action="Logout">
                                     <input type="submit" value="Выход" />
                                 </form>
                         }
                         else
                         {
-                                <a class="main-nav__link" asp-controller="Account" asp-action="Login">Войти</a>
-                                <a class="main-nav__link" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>                       
+                                <a class="nav__link" asp-controller="Account" asp-action="Login">Войти</a>
+                                <a class="nav__link" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>                       
                         }
                     </nav>  
                 </div>
