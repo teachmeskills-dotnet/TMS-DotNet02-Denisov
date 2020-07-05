@@ -1,43 +1,69 @@
 ﻿@model RegisterViewModel
-<h2>New user registration</h2>
-<form method="post" asp-controller="Account" asp-action="Register">
-    <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="FirstName"></label><br />
-        <input type="text" asp-for="FirstName" />
-        <span asp-validation-for="FirstName"></span>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Регистрация</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-controller="Account" asp-action="Register">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" asp-for="FirstName" class="form-control" placeholder="Имя">
+                        <span asp-validation-for="FirstName"></span>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" asp-for="SecondName" class="form-control" placeholder="Фамилия">
+                        <span asp-validation-for="SecondName"></span>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" asp-for="MiddleName" class="form-control" placeholder="Отчество">
+                        <span asp-validation-for="MiddleName"></span>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                        </div>
+                        <input type="text" asp-for="BirthDate" class="form-control" placeholder="Дата рождения">
+                        <span asp-validation-for="BirthDate"></span>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="email" asp-for="Email" class="form-control" placeholder="Email">
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" asp-for="Password" class="form-control" placeholder="Пароль">
+                        <span asp-validation-for="Password"></span>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" asp-for="PasswordConfirm" class="form-control" placeholder="Подтверждение пароля">
+                        <span asp-validation-for="PasswordConfirm"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Регистрация" class="btn float-right login_btn">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div>
-        <label asp-for="SecondName"></label><br />
-        <input type="text" asp-for="SecondName" />
-        <span asp-validation-for="SecondName"></span>
-    </div>
-    <div>
-        <label asp-for="MiddleName"></label><br />
-        <input type="text" asp-for="MiddleName" />
-        <span asp-validation-for="MiddleName"></span>
-    </div>
-    <div>
-        <label asp-for="BirthDate"></label><br />
-        <input type="date" asp-for="BirthDate" />
-        <span asp-validation-for="BirthDate"></span>
-    </div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input type="email" asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <div>
-        <label asp-for="Password"></label><br />
-        <input type="password" asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-    <div>
-        <label asp-for="PasswordConfirm"></label><br />
-        <input asp-for="PasswordConfirm" />
-        <span asp-validation-for="PasswordConfirm"></span>
-    </div>
-    <div>
-        <input type="submit" value="Registration" />
-    </div>
-</form>
+</div>
+
+

@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Denisov.DAL", "src\Denisov.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2D8A373C-9DA9-4CDE-9F58-91A9BD30191F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Denisov.UnitTests", "tests\Denisov.UnitTests\Denisov.UnitTests.csproj", "{7A652B93-B233-4D32-A781-3C98C48B3195}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Denisov.UnitTests", "tests\Denisov.UnitTests\Denisov.UnitTests.csproj", "{7A652B93-B233-4D32-A781-3C98C48B3195}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
