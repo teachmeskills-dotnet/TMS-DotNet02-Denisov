@@ -12,5 +12,10 @@ namespace Denisov.TobaccoStore.Controllers
         {
             return View();
         }
+
+        public IActionResult GeneratorResult()
+        {
+            return View();
+        }
     }
 }

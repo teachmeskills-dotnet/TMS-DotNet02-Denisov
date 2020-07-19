@@ -1,0 +1,43 @@
+﻿.about {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 1000px;
+    height: 500px;
+    color: antiquewhite;
+    background-color: rgba(0, 0, 0, 0.842);
+    display: flex;
+    flex-direction: column;
+    margin: 120px 30px;
+}
+
+
+/* Title */
+
+.about__title {
+    text-transform: uppercase;
+    width: 350px;
+    margin: 5px 25px;
+    padding: 5px 5px;
+}
+
+
+/* Content */
+
+.about__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+/* Image */
+
+.about__image {
+    width: 380px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.profile__image {
+    width: 360px;
+    height: 210px;
+}
