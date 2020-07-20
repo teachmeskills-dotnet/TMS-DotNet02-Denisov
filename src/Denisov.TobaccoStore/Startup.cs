@@ -29,6 +29,8 @@ namespace Denisov.TobaccoStore
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<DenisovDbContext>();
 
             services.AddScoped(typeof(IRepository<>), typeof(RepositoryManager<>));
+
+            services.AddTransient<RandomTobaccoService>();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

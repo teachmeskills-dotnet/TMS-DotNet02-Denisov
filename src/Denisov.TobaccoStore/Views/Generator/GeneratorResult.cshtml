@@ -1,28 +1,28 @@
-﻿@model IEnumerable<Denisov.DAL.Entities.Tobacco>
-@foreach (var tobacco in TobaccoResultViewModel)
-{
-    <article class="card">
-        <aside class="card__aside">
-            <figure class="card__figure">
-                <img asp-for="Image" src="@tobacco.Image" alt="Dummy Image" class="card__image">
-            </figure>
-        </aside>
-        <header class="card__header">
-            <h2 class="card__title">@tobacco.Name</h2>
-        </header>
-        <div class="card__body">
-            <p class="card__copy">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis
-                deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut
-                temporibus, at amet corporis id asperiores.
-            </p>
-        </div>
-        <footer class="card__footer">
-            apiente harum solu
-        </footer>
-    </article>
-}
+﻿@*@model IEnumerable<Denisov.DAL.Entities.Tobacco>
+*@
+@model Denisov.DAL.Entities.Tobacco
+@*@foreach (var tobacco in Model)*@
+@*  *@{
+<article class="card">
+    <aside class="card__aside">
+        <figure class="card__figure">
+            <img asp-for="Image" src="@Model.Image" alt="Dummy Image" class="card__image">
+        </figure>
+    </aside>
+    <header class="card__header">
+        <h2 class="card__title">@Model.Name</h2>
+    </header>
+    <div class="card__body">
+        <p>Крепость: @Model.Strength</p>
+        <p>Вкус: @Model.Flavour</p>
+        <p>Вкус: @Model.Flavour</p>
+        <p>Цена: @Model.Price за упаковку весом @Model.Weight грамм </p>
+    </div>
+    <footer class="card__footer">
+        apiente harum solu
+    </footer>
+</article>
+@*  *@}
 @section Css {
     <link rel="stylesheet" href="~/css/generator.css" />
 }

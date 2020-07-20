@@ -55,6 +55,10 @@ namespace Denisov.DAL
 
         }
 
+        public DenisovDbContext()
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
