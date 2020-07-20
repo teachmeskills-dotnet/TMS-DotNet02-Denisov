@@ -1,9 +1,7 @@
-﻿using Denisov.Common.Interfaces;
-using Denisov.DAL;
+﻿using Denisov.DAL;
 using Denisov.DAL.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +22,12 @@ namespace Denisov.TobaccoStore.Controllers
         //    return View(db.Tobaccos);
         //}
 
-        public IActionResult GeneratorResult(IServiceCollection services)
+        public async Task<IActionResult> GeneratorResult()
         {
-            //var tobaccos = await db.Tobaccos.ToListAsync();
-            //var random = new Random();
-            //int index = random.Next(tobaccos.Count);
-            return View(services);
+            var tobaccos = await db.Tobaccos.ToListAsync();
+            var random = new Random();
+            int index = random.Next(tobaccos.Count);
+            return View(tobaccos[index]);
         }
 
 
