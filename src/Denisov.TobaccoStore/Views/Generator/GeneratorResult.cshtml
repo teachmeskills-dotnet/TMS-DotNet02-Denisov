@@ -1,8 +1,5 @@
-﻿@*@model IEnumerable<Denisov.DAL.Entities.Tobacco>
-*@
-@model Denisov.DAL.Entities.Tobacco
-@*@foreach (var tobacco in Model)*@
-@*  *@{
+﻿@model Denisov.DAL.Entities.Tobacco
+{
 <article class="card">
     <aside class="card__aside">
         <figure class="card__figure">
@@ -15,14 +12,12 @@
     <div class="card__body">
         <p>Крепость: @Model.Strength</p>
         <p>Вкус: @Model.Flavour</p>
-        <p>Вкус: @Model.Flavour</p>
-        <p>Цена: @Model.Price за упаковку весом @Model.Weight грамм </p>
+        <p>Цена: @Model.Price BYN за упаковку весом @Model.Weight грамм </p>
     </div>
     <footer class="card__footer">
-        apiente harum solu
+       @Model.Type
     </footer>
 </article>
-@*  *@}
 @section Css {
     <link rel="stylesheet" href="~/css/generator.css" />
 }

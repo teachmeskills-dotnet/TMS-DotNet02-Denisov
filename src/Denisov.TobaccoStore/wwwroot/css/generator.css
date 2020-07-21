@@ -1,2 +1,47 @@
-﻿body {
+﻿/*Card*/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    color: antiquewhite;
+    background-color: #161515d4 !important;
+}
+
+.card__aside {
+    width: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card__header {
+    display: flex;
+    justify-content: center;
+}
+
+.card__title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*Generator*/
+
+.generator__content {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/*Tobacco*/
+.random__tobacco {
+    background-color: #c67575;
+    width: 614px;
+    height: 81px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

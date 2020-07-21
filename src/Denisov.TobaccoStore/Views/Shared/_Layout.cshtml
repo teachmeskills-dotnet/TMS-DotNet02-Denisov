@@ -6,7 +6,6 @@
     <title>@ViewData["Title"] - Denisov.TobaccoStore</title>
     @RenderSection("Css", required: false)
     <link rel="stylesheet" href="~/css/site.css">
-    <link rel="stylesheet" href="~/css/sign.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
 </head>
@@ -21,16 +20,16 @@
                         <a class="nav__link" asp-controller="Places" asp-action="Places">Места</a>
                         <a class="nav__link" asp-controller="About" asp-action="About">О нас</a>
                         @if (User.Identity.IsAuthenticated)
-                        {                       
-                                <p class="nav__link">@User.Identity.Name</p>
-                                <form method="post" class="main-nav__link" asp-controller="Account" asp-action="Logout">
-                                    <input type="submit" value="Выход" />
-                                </form>
+                        {
+                            <p class="nav__link">@User.Identity.Name</p>
+                            <form method="post" class="nav__link exit__button" asp-controller="Account" asp-action="Logout">
+                                <input type="submit" value="Выход" />
+                            </form>
                         }
                         else
                         {
-                                <a class="nav__link" asp-controller="Account" asp-action="Login">Войти</a>
-                                <a class="nav__link" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>                       
+                            <a class="nav__link" asp-controller="Account" asp-action="Login">Войти</a>
+                            <a class="nav__link" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>
                         }
                     </nav>  
                 </div>

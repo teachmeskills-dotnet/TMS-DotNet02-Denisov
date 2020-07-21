@@ -95,11 +95,14 @@ h6 {
             opacity: 1;
         }
 
+.exit__button{
+    text-decoration: none;
+    text-transform: uppercase;
+}
 /* Footer */
-
 .footer {
-  position: absolute;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; 
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
 }
