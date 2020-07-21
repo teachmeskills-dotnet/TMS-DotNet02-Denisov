@@ -6,6 +6,7 @@ The application is free-to-use, so you just need to login to start and open a en
 ## Built with
 - [ASP.NET Core 3.1](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
 - [Docker](https://www.docker.com)
+- [Bootstrap V4.5.0](https://getbootstrap.com)
 - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 ## Author
 [Viktor D.](https://admiring-northcutt-353fff.netlify.app) - Junior Developer.
