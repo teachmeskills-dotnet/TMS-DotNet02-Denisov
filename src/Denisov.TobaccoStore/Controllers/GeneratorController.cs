@@ -1,10 +1,8 @@
 ﻿using Denisov.DAL;
-using Denisov.DAL.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Denisov.TobaccoStore.Controllers
@@ -17,11 +15,7 @@ namespace Denisov.TobaccoStore.Controllers
         {
             db = context;
         }
-        //public IActionResult GeneratorResult()
-        //{
-        //    return View(db.Tobaccos);
-        //}
-
+        [Authorize]
         public async Task<IActionResult> GeneratorResult()
         {
             var tobaccos = await db.Tobaccos.ToListAsync();

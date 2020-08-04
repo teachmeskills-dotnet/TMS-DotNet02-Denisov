@@ -10,30 +10,32 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
 </head>
 <body>
-    <header class="header">     
-            <div class="container">
-                <div class="header__inner">
-                    <div class="header__logo">Denisov Tobacco Store</div>
-                    <nav class="nav">
-                        <a class="nav__link" asp-controller="Home" asp-action="Index">Главная</a>
-                        <a class="nav__link" asp-controller="Generator" asp-action="Generator">Генератор</a>
-                        <a class="nav__link" asp-controller="Places" asp-action="Places">Места</a>
-                        <a class="nav__link" asp-controller="About" asp-action="About">О нас</a>
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <p class="nav__link">@User.Identity.Name</p>
-                            <form method="post" class="nav__link exit__button" asp-controller="Account" asp-action="Logout">
-                                <input type="submit" value="Выход" />
-                            </form>
-                        }
-                        else
-                        {
-                            <a class="nav__link" asp-controller="Account" asp-action="Login">Войти</a>
-                            <a class="nav__link" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>
-                        }
-                    </nav>  
-                </div>
-            </div>     
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">Denisov Tobacco Store</div>
+                <nav class="nav">
+                    <a class="nav__link" asp-controller="Home" asp-action="Index">Главная</a>
+                    <a class="nav__link" asp-controller="Generator" asp-action="Generator">Генератор</a>
+                    <a class="nav__link" asp-controller="Places" asp-action="Places">Места</a>
+                    <a class="nav__link" asp-controller="About" asp-action="About">О нас</a>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <p class="nav__link">@User.Identity.Name</p>
+                        <form method="post" class="nav__link" asp-controller="Account" asp-action="Logout">
+                            <input style="background-color: black; display: inline-block; vertical-align: top; margin: 0 15px;
+         position: relative; color: antiquewhite; transition: color .1s linear; text-decoration: none; border: none; text-transform: uppercase;"
+                                   type="submit" value="Выход" />
+                        </form>
+                    }
+                    else
+                    {
+                        <a class="nav__link" asp-controller="Account" asp-action="Login">Войти</a>
+                        <a class="nav__link" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>
+                    }
+                </nav>
+            </div>
+        </div>
     </header>
 
     <div class="container">
@@ -42,9 +44,10 @@
         </main>
     </div>
 
-    <footer class="footer">
+
+    <footer class="footer mt-auto py-3">
         <div class="container">
-            &copy; 2020 - Denisov.TobaccoStore - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <span class="text-muted"> &copy; 2020 - Denisov.TobaccoStore - <a asp-controller="Home" asp-action="Privacy">Privacy</a></span>
         </div>
     </footer>
     @RenderSection("Scripts", required: false)

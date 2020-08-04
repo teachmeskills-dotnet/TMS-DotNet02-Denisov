@@ -31,7 +31,6 @@ h6 {
     width: 100%;
 }
 
-
 /* Header */
 
 .header {
@@ -95,9 +94,8 @@ h6 {
             opacity: 1;
         }
 
-.exit__button{
-    text-decoration: none;
-    text-transform: uppercase;
+.exit__button {
+    
 }
 /* Footer */
 .footer {
