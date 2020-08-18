@@ -4,14 +4,20 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-size: 15px;
     line-height: 1.6;
     color: antiquewhite;
-    background: url("../img/Intro.jpg") center no-repeat;
+    background-image: url("../img/Intro.jpg");
     background-size: cover;
-    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
     width: 100%;
 }
 
@@ -37,7 +43,6 @@ h6 {
     display: flex;
     justify-content: space-between;
     width: 100%;
-/*    margin-bottom: 250px;*/
     background-color: rgba(0, 0, 0, 0.795);
 }
 
@@ -93,13 +98,8 @@ h6 {
         .nav__link:hover:after {
             opacity: 1;
         }
-
-.exit__button {
-    
-}
 /* Footer */
 .footer {
-    position: absolute;
     width: 100%;
     white-space: nowrap;
     line-height: 60px;

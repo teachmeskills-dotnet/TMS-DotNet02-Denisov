@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +21,7 @@
                     <a class="nav__link" asp-controller="About" asp-action="About">О нас</a>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <p class="nav__link">@User.Identity.Name</p>
+                        <a class="nav__link" asp-controller="PersonalPage" asp-action="PersonalPage">@User.Identity.Name</a>
                         <form method="post" class="nav__link" asp-controller="Account" asp-action="Logout">
                             <input style="background-color: black; display: inline-block; vertical-align: top; margin: 0 15px;
          position: relative; color: antiquewhite; transition: color .1s linear; text-decoration: none; border: none; text-transform: uppercase;"
@@ -38,7 +38,7 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container" style="display: flex; justify-content: center;">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
