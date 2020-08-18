@@ -12,7 +12,7 @@ The application is free-to-use, so you just need to login to start and open a en
 - [Docker](https://www.docker.com)
 - [Bootstrap V4.5.0](https://getbootstrap.com)
 - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
-- [Disqus] (https://disqus.com)
+- [Disqus](https://disqus.com)
 
 ## Author
 
