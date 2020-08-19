@@ -15,20 +15,27 @@ namespace Denisov.TobaccoStore.Controllers
         {
             db = context;
         }
-        [Authorize]
-        public async Task<IActionResult> GeneratorResult()
-        {
-            var tobaccos = await db.Tobaccos.ToListAsync();
-            var random = new Random();
-            int index = random.Next(tobaccos.Count);
-            return View(tobaccos[index]);
-        }
-
-
         public IActionResult Generator()
         {
             return View();
         }
 
+        [Authorize]
+        public async Task<IActionResult> TobaccoGeneratorResult()
+        {
+            var tobaccos = await db.Tobaccos.ToListAsync();
+            var random = new Random();
+            int index = random.Next(tobaccos.Count);
+            return View(tobaccos[index]);
+        }       
+
+        [Authorize]
+        public async Task<IActionResult> MixGeneratorResult()
+        {
+            var mixes = await db.Mixes.ToListAsync();
+            var random = new Random();
+            int index = random.Next(mixes.Count);
+            return View(mixes[index]);
+        }
     }
 }
