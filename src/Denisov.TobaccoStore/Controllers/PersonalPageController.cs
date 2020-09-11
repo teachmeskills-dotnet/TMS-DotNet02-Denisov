@@ -2,9 +2,9 @@
 
 namespace Denisov.TobaccoStore.Controllers
 {
-    public class PlacesController : Controller
+    public class PersonalPageController : Controller
     {
-        public IActionResult Places()
+        public IActionResult PersonalPage()
         {
             return View();
         }

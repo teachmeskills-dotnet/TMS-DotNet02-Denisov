@@ -52,7 +52,10 @@ namespace Denisov.DAL
         public DenisovDbContext(DbContextOptions<DenisovDbContext> options) :
             base(options)
         {
+        }
 
+        public DenisovDbContext()
+        {
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

@@ -1,9 +1,10 @@
 ﻿.card {
-    margin-top: 200px;
-    height: 320px;
+    height: auto;
     margin-bottom: auto;
+    margin-top: 100px;
     width: 400px;
     background-color: rgba(0, 0, 0, 0.5);
+    background-color: #161515d4 !important;
 }
 
 .social_icon span {
@@ -18,7 +19,7 @@
     }
 
 .card-header h3 {
-    color: white;
+    color: antiquewhite;
 }
 
 .social_icon {

@@ -12,7 +12,6 @@ namespace Denisov.DAL.Entities
         /// </summary>
         public int Id { get; set; }
 
-
         /// <summary>
         /// Tobacco identifier.
         /// </summary>

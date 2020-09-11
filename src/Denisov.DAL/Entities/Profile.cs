@@ -43,7 +43,6 @@ namespace Denisov.DAL.Entities
         /// </summary>
         public bool IsBlocked { get; set; }
 
-
         /// <summary>
         /// User identifier.
         /// </summary>

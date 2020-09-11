@@ -1,5 +1,3 @@
-using System;
-
 namespace Denisov.TobaccoStore.Models
 {
     public class ErrorViewModel

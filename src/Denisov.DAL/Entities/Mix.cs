@@ -28,6 +28,15 @@ namespace Denisov.DAL.Entities
         /// </summary>
         public string Strength { get; set; }
 
+        /// <summary>
+        /// Mix flavour.
+        /// </summary>
+        public string Flavour { get; set; }
+
+        /// <summary>
+        /// Mix description.
+        /// </summary>
+        public string Description { get; set; }
 
         /// <summary>
         /// Saved mix list.

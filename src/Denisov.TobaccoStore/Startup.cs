@@ -1,14 +1,14 @@
+using Denisov.BLL.Services;
+using Denisov.Common.Interfaces;
 using Denisov.DAL;
+using Denisov.DAL.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Denisov.BLL.Services;
-using Denisov.Common.Interfaces;
-using Microsoft.AspNetCore.Identity;
-using Denisov.DAL.Identity;
 
 namespace Denisov.TobaccoStore
 {
@@ -20,6 +20,7 @@ namespace Denisov.TobaccoStore
         }
 
         public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
@@ -28,8 +29,11 @@ namespace Denisov.TobaccoStore
 
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<DenisovDbContext>();
 
-            //services.AddScoped(typeof(IRepository<>), typeof(RepositoryManager<>));
+            services.AddScoped(typeof(IRepository<>), typeof(RepositoryManager<>));
+
+            services.AddTransient<RandomTobaccoService>();
         }
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -48,7 +52,6 @@ namespace Denisov.TobaccoStore
 
             app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

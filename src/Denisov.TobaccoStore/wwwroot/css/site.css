@@ -4,14 +4,20 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-size: 15px;
     line-height: 1.6;
     color: antiquewhite;
-    background: url("~/img/Intro.jpg") center no-repeat;
+    background-image: url("../img/Intro.jpg");
     background-size: cover;
-    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
     width: 100%;
 }
 
@@ -30,7 +36,6 @@ h6 {
     max-width: 1920px;
     width: 100%;
 }
-
 
 /* Header */
 
@@ -52,10 +57,6 @@ h6 {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-}
-
-.header-indent {
-    margin-bottom: 50px;
 }
 
 /* Navigation */
@@ -99,11 +100,22 @@ h6 {
         }
 
 /* Footer */
-
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; 
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+/* Input */
+.button__logout {
+    background-color: black;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: antiquewhite;
+    transition: color .1s linear;
+    text-decoration: none;
+    border: none;
+    text-transform: uppercase;
 }
