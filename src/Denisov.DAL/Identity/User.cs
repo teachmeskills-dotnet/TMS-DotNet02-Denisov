@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+
 namespace Denisov.DAL.Identity
 {
     /// <summary>

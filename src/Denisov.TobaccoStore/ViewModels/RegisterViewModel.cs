@@ -54,7 +54,5 @@ namespace Denisov.TobaccoStore.ViewModels
         /// </summary>
         [Required]
         public DateTime BirthDate { get; set; }
-
-
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Denisov.Common.Interfaces
+﻿namespace Denisov.Common.Interfaces
 {
     /// <summary>
     /// Interface which allow to add name to certain entities.

@@ -1,20 +1,22 @@
 ﻿@model Denisov.DAL.Entities.Tobacco
-    <article class="card">
-        <figure class="card__figure">
-            <img asp-for="Image" src="@Model.Image" alt="Dummy Image" class="card__image">
-        </figure>
-        <div class="card__header">
-            <h2 class="card__title">@Model.Name</h2>
-        </div>
-        <div class="card__body">
-            <p>Крепость: @Model.Strength</p>
-            <p>Вкус: @Model.Flavour</p>
-            <p>Цена: @Model.Price BYN за упаковку весом @Model.Weight грамм </p>
-        </div>
-        <div class="card__footer">
-            @Model.Type
-        </div>
-    </article>
+
+<article class="card">
+    <figure class="card__figure">
+        <img asp-for="Image" src="@Model.Image" alt="Dummy Image" class="card__image">
+    </figure>
+    <div class="card__header">
+        <h2 class="card__title">@Model.Name</h2>
+    </div>
+    <div class="card__body">
+        <p>Крепость: @Model.Strength</p>
+        <p>Вкус: @Model.Flavour</p>
+        <p>Цена: @Model.Price BYN за упаковку весом @Model.Weight грамм </p>
+    </div>
+    <div class="card__footer">
+        @Model.Type
+    </div>
+</article>
+
 @section Css {
     <link rel="stylesheet" href="~/css/generator.css" />
 }

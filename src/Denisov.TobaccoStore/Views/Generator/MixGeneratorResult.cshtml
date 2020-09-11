@@ -1,4 +1,5 @@
 ﻿@model Denisov.DAL.Entities.Mix
+
 <article class="card">
     <figure class="card__figure">
         <img asp-for="Image" src="@Model.Image" alt="Dummy Image" class="card__image">
@@ -14,6 +15,7 @@
         @Model.Description
     </div>
 </article>
+
 @section Css {
     <link rel="stylesheet" href="~/css/generator.css" />
 }

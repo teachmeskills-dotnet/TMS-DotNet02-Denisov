@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     height: 100%;
 }
 
@@ -98,9 +98,24 @@ h6 {
         .nav__link:hover:after {
             opacity: 1;
         }
+
 /* Footer */
 .footer {
     width: 100%;
     white-space: nowrap;
     line-height: 60px;
+}
+
+/* Input */
+.button__logout {
+    background-color: black;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: antiquewhite;
+    transition: color .1s linear;
+    text-decoration: none;
+    border: none;
+    text-transform: uppercase;
 }

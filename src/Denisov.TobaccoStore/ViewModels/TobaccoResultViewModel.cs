@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Denisov.TobaccoStore.ViewModels
 {
@@ -10,7 +6,7 @@ namespace Denisov.TobaccoStore.ViewModels
     /// Model which is used for generated tobacco result.
     /// </summary>
     public class TobaccoResultViewModel
-    { 
+    {
         /// <summary>
         /// Tobacco picture.
         /// </summary>
@@ -45,6 +41,5 @@ namespace Denisov.TobaccoStore.ViewModels
         /// </summary>
         [Required]
         public int Weight { get; set; }
-
     }
 }

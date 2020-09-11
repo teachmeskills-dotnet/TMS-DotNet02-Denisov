@@ -27,11 +27,10 @@ namespace Denisov.TobaccoStore.ViewModels
         /// </summary>
         [Display(Name = "Remember?")]
         public bool RememberMe { get; set; }
+
         /// <summary>
         /// Url used after successful log in action. 
         /// </summary>
         public string ReturnUrl { get; set; }
     }
-
 }
-

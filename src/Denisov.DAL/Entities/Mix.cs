@@ -38,7 +38,6 @@ namespace Denisov.DAL.Entities
         /// </summary>
         public string Description { get; set; }
 
-
         /// <summary>
         /// Saved mix list.
         /// </summary>

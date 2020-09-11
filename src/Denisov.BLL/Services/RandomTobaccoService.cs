@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Denisov.BLL.Services
 {
-    public class RandomTobaccoService: IRandomTobacco
+    public class RandomTobaccoService : IRandomTobacco
     {
         private readonly DenisovDbContext _context;
 

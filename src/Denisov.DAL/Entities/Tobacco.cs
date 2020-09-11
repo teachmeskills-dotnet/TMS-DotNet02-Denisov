@@ -48,7 +48,6 @@ namespace Denisov.DAL.Entities
         /// </summary>
         public int Weight { get; set; }
 
-
         /// <summary>
         /// Saved tobacco list.
         /// </summary>

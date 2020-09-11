@@ -9,12 +9,13 @@ namespace Denisov.TobaccoStore.Controllers
 {
     public class GeneratorController : Controller
     {
-        DenisovDbContext db;
+        private DenisovDbContext db;
 
         public GeneratorController(DenisovDbContext context)
         {
             db = context;
         }
+
         public IActionResult Generator()
         {
             return View();
@@ -27,7 +28,7 @@ namespace Denisov.TobaccoStore.Controllers
             var random = new Random();
             int index = random.Next(tobaccos.Count);
             return View(tobaccos[index]);
-        }       
+        }
 
         [Authorize]
         public async Task<IActionResult> MixGeneratorResult()

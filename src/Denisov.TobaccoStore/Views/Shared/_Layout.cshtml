@@ -23,9 +23,7 @@
                     {
                         <a class="nav__link" asp-controller="PersonalPage" asp-action="PersonalPage">@User.Identity.Name</a>
                         <form method="post" class="nav__link" asp-controller="Account" asp-action="Logout">
-                            <input style="background-color: black; display: inline-block; vertical-align: top; margin: 0 15px;
-         position: relative; color: antiquewhite; transition: color .1s linear; text-decoration: none; border: none; text-transform: uppercase;"
-                                   type="submit" value="Выход" />
+                            <input class="button__logout" type="submit" value="Выход" />
                         </form>
                     }
                     else
@@ -44,12 +42,12 @@
         </main>
     </div>
 
-
     <footer class="footer mt-auto py-3">
         <div class="container">
             <span class="text-muted"> &copy; 2020 - Denisov.TobaccoStore - <a asp-controller="Home" asp-action="Privacy">Privacy</a></span>
         </div>
     </footer>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

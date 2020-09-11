@@ -21,11 +21,13 @@ namespace Denisov.TobaccoStore.Controllers
             _signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
             _appContext = appContext ?? throw new ArgumentNullException(nameof(appContext));
         }
+
         [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
@@ -49,7 +51,6 @@ namespace Denisov.TobaccoStore.Controllers
 
                     await _appContext.Profiles.AddAsync(profile);
                     await _appContext.SaveChangesAsync();
-
 
                     await _signInManager.SignInAsync(user, false);
                     return RedirectToAction("Index", "Home");
@@ -105,7 +106,5 @@ namespace Denisov.TobaccoStore.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-
-
     }
 }

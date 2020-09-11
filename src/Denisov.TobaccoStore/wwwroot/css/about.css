@@ -9,7 +9,6 @@
     margin: 120px 30px;
 }
 
-
 /* Title */
 
 .about__title {
@@ -19,7 +18,6 @@
     padding: 5px 5px;
 }
 
-
 /* Content */
 
 .about__content {
@@ -27,7 +25,6 @@
     justify-content: space-between;
     flex-direction: row;
 }
-
 
 /* Image */
 

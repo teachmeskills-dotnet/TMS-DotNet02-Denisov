@@ -5,8 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Constants\" />
-    <Folder Include="Extensions\" />
+    <Compile Remove="Constants\**" />
+    <Compile Remove="Extensions\**" />
+    <Content Remove="Constants\**" />
+    <Content Remove="Extensions\**" />
+    <EmbeddedResource Remove="Constants\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <None Remove="Constants\**" />
+    <None Remove="Extensions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
